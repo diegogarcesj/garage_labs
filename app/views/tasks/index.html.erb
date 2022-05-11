@@ -1,0 +1,11 @@
+<div class="container">
+
+<%= link_to "Nueva tarea", new_task_path %>
+
+<h1>Tareas</h1>
+
+<% @tasks.each do |task| %>
+  <%= task.description %> - <%= task.status %> <%= link_to "Completar", complete_path(task), :method=> :put %> <br>
+<% end %>
+
+</div>
